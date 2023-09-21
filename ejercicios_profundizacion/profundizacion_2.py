@@ -36,24 +36,34 @@ alguno de lo soportados o no es la palabra "FIN".
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
 
-numero_1 = int(input('Ingrese el primer número \n'))
-numero_2 = int(input('Ingrese el segundo número \n')) 
-operador_matematico = str(input('Ingrese el operador matematico que desee \n')) 
-
-if operador_matematico == "+" :
-        suma = numero_1 + numero_2   
-        print('El resultado de la suma es', suma)
-elif operador_matematico == "-" :
-        resta = numero_1 - numero_2 
-        print("El valor de la resta es:" , resta )
-elif operador_matematico == "*" : 
-        multiplicacion = numero_1 * numero_2 
-        print("El valor de la multiplicación es:" ,multiplicacion )          
-elif operador_matematico == "/" :
-        division = numero_1 / numero_2 
-        print("El valor de la division es:" ,division )
-elif operador_matematico == "**":
-        potencia = numero_1 ** numero_2  
-        print("El valor de la potencia es:" ,potencia )  
-elif   operador_matematico == "FIN":
-    print("El operador ingresado no es valido")  
+while True:
+    numero_1 = int(input("Ingrese el primer numero de la operacion:\n"))
+    numero_2 = int(input("Ingrese el segundo numero de la operacion:\n"))
+    operador = str(input("""Indique la operacion a realiar:
+    - Suma (+)
+    - Resta (-)
+    - Multiplicación (*)
+    - División (/)
+    - Exponente/Potencia (**)
+    - Para finalizar ingrese (FIN)\n"""))
+    if operador == "+":
+        suma = numero_1 + numero_2
+        print("Resultado:",numero_1, "+", numero_2, "=", suma)
+    elif operador == "-":
+        resta = numero_1 - numero_2
+        print("Resultado:",numero_1, "-", numero_2, "=", resta)
+    elif operador == "*":
+        multiplicacion = numero_1 * numero_2
+        print("Resultado:",numero_1, "*", numero_2, "=", multiplicacion)
+    elif operador == "/":
+        division = numero_1 / numero_2
+        print("Resultado:",numero_1, "/", numero_2, "=", division)
+    elif operador == "**":
+        exponente = numero_1 ** numero_2
+        print("Resultado:",numero_1, "**", numero_2, "=", exponente)           
+    elif operador == "FIN":
+        break
+    else:
+        print("ERROR, la opcion ingresada es incorrecta, reingrese los valores")
+        
+print("Fin del programa")        
