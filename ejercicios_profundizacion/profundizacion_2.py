@@ -64,6 +64,7 @@ while True:
     elif operador == "FIN":
         break
     else:
-        print("ERROR, la opcion ingresada es incorrecta, reingrese los valores")
+        print("ERROR, la opcion ingresada es incorrecta, reingrese \
+               los valores")
         
 print("Fin del programa")        
