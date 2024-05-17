@@ -25,7 +25,7 @@ while True:
             contador += 1       # Incremento el contador
             print("Contador =", contador)
         else:
-            print("Se ha ingresado un número impar, no se aumenta el contador")
+            print("Se ha ingresado un número impar,no se aumenta el contador")
     else:
         # Terminó el bucle
         print("Número ingresado negativo, termina el bucle")
